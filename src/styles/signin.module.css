@@ -1,0 +1,16 @@
+.post{
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: 0 0 10px 2px gray;
+    border-radius: 10px;
+    margin: 2rem;
+    min-height: 20rem;
+    min-width: 20rem;
+}
+input{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin:10px;
+}

@@ -2,29 +2,22 @@ import "./App.css";
 import { lightTheme, darkTheme } from "./utils/themes";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
-import { useState } from "react";
+import { useState, createContext } from "react";
+import { Login } from "./components/Login";
+import { Signup } from "./components/SignUp";
 
+export const Theme = createContext();
 function App() {
-  const [mode, setMode] = useState(darkTheme);
-
+  const [mode, setMode] = useState(lightTheme);
   return (
     <ThemeProvider theme={mode}>
       <GlobalStyles />
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Theme.Provider value={mode}>
+        <div className="container">
+          <Login />
+          <Signup />
+        </div>
+      </Theme.Provider>
     </ThemeProvider>
   );
 }
