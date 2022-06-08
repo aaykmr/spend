@@ -25,6 +25,7 @@ export const Signup = () => {
       <input
         type="password"
         id="signPassConfirm"
+        data-testid="signPassConfirm"
         placeholder="Repeat Password"
       />
     </div>
