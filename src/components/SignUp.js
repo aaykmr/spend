@@ -1,33 +1,30 @@
 import React from "react";
-import styles from "../styles/signin.module.css";
 import { useContext } from "react";
-import { Theme } from "../App";
 
 export const Signup = () => {
-  const theme = useContext(Theme);
   return (
-    <div className={styles.post}>
-      <h1>SignUp </h1>
+    <div className="post">
+      <h1>Sign Up </h1>
       <input
         type="text"
         id="signId"
         data-testid="signId"
         placeholder="Choose Username"
       />
-      <br></br>
       <input
         type="password"
         id="signPass"
         data-testid="signPass"
         placeholder="Choose Password"
       />
-      <br></br>
+
       <input
         type="password"
         id="signPassConfirm"
         data-testid="signPassConfirm"
         placeholder="Repeat Password"
       />
+      <button className="btn btn-primary">Submit</button>
     </div>
   );
 };

@@ -1,0 +1,32 @@
+[
+    {
+        "username":"ak",
+        "password":"1234",
+        "name":"Aayush",
+        "transactions":{
+            "credit":{
+                "salary":100000,
+                "interest":20000
+            },
+            "debit":{
+                "rent":12000,
+                "food":2400
+            }
+        }
+    },
+    {
+        "username":"ma",
+        "password":"12345",
+        "name":"Milind",
+        "transactions":{
+            "credit":{
+                "salary":50000,
+                "interest":30000
+            },
+            "debit":{
+                "rent":6000,
+                "food":2400
+            }
+        }
+    }
+]
