@@ -5,9 +5,8 @@ import { GlobalStyles } from "./global";
 import { useState, createContext } from "react";
 import AuthCheck from "./AuthCheck";
 import { UserContext } from "./context";
-import Home from "./components/Home";
-import axios from "axios";
 import users from "./users.json";
+import Routee from "./route/Routes";
 function App() {
   console.log(users);
   const [mode, setMode] = useState(darkTheme);
@@ -18,7 +17,7 @@ function App() {
       <div className="container">
         <UserContext.Provider value={userData}>
           <AuthCheck>
-            <Home name={userData.name} />
+            <Routee />
           </AuthCheck>
         </UserContext.Provider>
       </div>
