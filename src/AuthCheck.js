@@ -2,16 +2,18 @@ import { useContext } from "react";
 import { UserContext } from "./context";
 import { Login } from "./components/Login";
 import { Signup } from "./components/SignUp";
-// Component's children only shown to logged-in users
-export default function AuthCheck(props) {
-  const { username } = useContext(UserContext);
+import money from "./images/money-falling.gif";
 
-  return username
+export default function AuthCheck(props) {
+  const user = useContext(UserContext);
+  return !user.length
     ? props.children
     : props.fallback || (
         <>
-          <Login />
-          <Signup />
+          <div className="d-flex flex-column w-50">
+            <Login />
+            <Signup />
+          </div>
         </>
       );
 }

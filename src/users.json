@@ -3,30 +3,70 @@
         "username":"ak",
         "password":"1234",
         "name":"Aayush",
-        "transactions":{
-            "credit":{
-                "salary":100000,
-                "interest":20000
+        "transactions":[
+            {
+                "title":"Salary",
+                "amount":100000,
+                "type":"credit",
+                "created": 1655019286951,
+                "id":1
             },
-            "debit":{
-                "rent":12000,
-                "food":2400
+            {
+                "title":"Interest",
+                "amount":10000,
+                "type":"credit",
+                "created": 165019286952,
+                "id":2
+            },
+            {
+                "title":"Food",
+                "amount":1000,
+                "type":"debit",
+                "created": 165019286953,
+                "id":3
+            },
+            {
+                "title":"Rent",
+                "amount":12000,
+                "type":"debit",
+                "created": 165019286954,
+                "id":4
             }
-        }
+        ]
     },
     {
         "username":"ma",
-        "password":"12345",
+        "password":"1234",
         "name":"Milind",
-        "transactions":{
-            "credit":{
-                "salary":50000,
-                "interest":30000
+        "transactions":[
+            {
+                "title":"Salary",
+                "amount":90000,
+                "type":"credit" ,
+                "created": 165019286951,
+                "id":1
             },
-            "debit":{
-                "rent":6000,
-                "food":2400
+            {
+                "title":"Interest",
+                "amount":1000,
+                "type":"credit",
+                "created": 165019286952,
+                "id":2
+            },
+            {
+                "title":"Food",
+                "amount":500,
+                "type":"debit",
+                "created": 165019286953,
+                "id":3
+            },
+            {
+                "title":"Rent",
+                "amount":10000,
+                "type":"debit",
+                "created": 165019286954,
+                "id":4
             }
-        }
+        ]
     }
 ]

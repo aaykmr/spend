@@ -8,12 +8,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    align-items: center;
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -29,8 +25,9 @@ export const GlobalStyles = createGlobalStyle`
     box-shadow: 0 0 10px 2px ${({ theme }) => theme.boxShadow};
     border-radius: 10px;
     margin: 2rem;
-    min-height: 20rem;
+    min-height: 17rem;
     min-width: 20rem;
+    width: 80%;
 }
 input{
     border: none;
@@ -38,7 +35,29 @@ input{
     background: transparent;
     outline: none;
     width: 100%;
+    color: ${({ theme }) => theme.text};
+}
+.navbar{
+  border-radius: 0  0 10px 10px;
+}
+.toggle{
+  position: fixed;
+  background: ${({ theme }) => theme.text};
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  right: 10px;
+  bottom: 10px;
+  font-size: 22px;
+  color: ${({ theme }) => theme.body};
+}
+.toggle:hover{
+  background: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.body};
 }
 
-
-  `;
+.toggle:focus{
+  background: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.body};
+  outline: none;
+}  `;
