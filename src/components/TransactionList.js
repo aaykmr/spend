@@ -14,7 +14,7 @@ const TransactionList = ({ transactions, type }) => {
       {transactions.map((ele) => {
         return (
           <div
-            className=" d-flex justify-content-center align-items-center w-100 border border-2 border-primary rounded-pill m-2"
+            className=" d-flex justify-content-center align-items-center tlist border border-2 border-primary rounded m-2"
             key={ele.id}
           >
             <span className="m-2">{ele.title}</span>

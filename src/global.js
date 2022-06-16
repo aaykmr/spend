@@ -60,4 +60,21 @@ input{
   background: ${({ theme }) => theme.text};
   color: ${({ theme }) => theme.body};
   outline: none;
+}
+.tlist{
+  width: 45%;
+}
+.add{
+  width:75%;
+}
+@media only screen and (max-width: 654px) {
+  .tlist{
+    width: 100%;
+  }
+  .add{
+    width:100%;
+  }
+  .column{
+    flex-direction: column;
+  }
 }  `;

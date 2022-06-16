@@ -39,7 +39,7 @@ const Add = () => {
     setAdd(false);
   }
   let form = (
-    <div className="d-flex">
+    <div className="d-flex column">
       <button
         className={
           type == "debit"
@@ -85,8 +85,8 @@ const Add = () => {
     <div
       className={
         add
-          ? "card bg-transparent border-primary text-center fs-6 p-2 w-75"
-          : "card bg-primary border-primary text-center fs-3 p-2 w-75"
+          ? "card bg-transparent border-primary text-center fs-6 p-2 add"
+          : "card bg-primary border-primary text-center fs-3 p-2 add"
       }
     >
       <span

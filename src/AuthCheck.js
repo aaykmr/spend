@@ -2,11 +2,11 @@ import { useContext } from "react";
 import { UserContext } from "./context";
 import { Login } from "./components/Login";
 import { Signup } from "./components/SignUp";
-import money from "./images/money-falling.gif";
 
 export default function AuthCheck(props) {
   const user = useContext(UserContext);
-  return !user.length
+  console.log(user);
+  return user.username
     ? props.children
     : props.fallback || (
         <>
