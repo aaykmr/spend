@@ -77,4 +77,10 @@ input{
   .column{
     flex-direction: column;
   }
-}  `;
+}
+@media only screen and (max-width: 500px) {
+  .navigation{
+    flex-direction: column;
+  }
+}  
+`;

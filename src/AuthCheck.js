@@ -5,7 +5,6 @@ import { Signup } from "./components/SignUp";
 
 export default function AuthCheck(props) {
   const user = useContext(UserContext);
-  console.log(user);
   return user.username
     ? props.children
     : props.fallback || (

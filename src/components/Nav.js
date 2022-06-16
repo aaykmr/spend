@@ -13,7 +13,7 @@ const Nav = () => {
     toast.success("You were logged out");
   }
   return (
-    <div className="navbar navbar-dark d-flex justify-content-between column bg-danger p-3">
+    <div className="navbar navbar-dark d-flex justify-content-between navigation bg-danger p-3">
       <img src={cash} alt="logo" width="50px"></img>
       <h3>Hello, {name}</h3>
       <button

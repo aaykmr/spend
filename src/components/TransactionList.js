@@ -12,15 +12,23 @@ const TransactionList = ({ user, type }) => {
         } else return ele.type === type;
       })
     : [];
+  function haveSameData(obj1, obj2) {
+    const obj1Length = Object.keys(obj1).length;
+    const obj2Length = Object.keys(obj2).length;
 
+    if (obj1Length === obj2Length) {
+      return Object.keys(obj1).every(
+        (key) => obj2.hasOwnProperty(key) && obj2[key] === obj1[key]
+      );
+    }
+    return false;
+  }
   function handleDelete(ele) {
-    console.log(ele);
-
     let curr = user.transactions.find((e) => {
-      return e === ele;
+      haveSameData(ele, e);
+      return haveSameData(e, ele);
     });
-    console.log(user.transactions.indexOf(curr));
-    user.transactions.splice(transactions.indexOf(curr), 1);
+    user.transactions.splice(user.transactions.indexOf(curr), 1);
     dispatch(updateUser(user));
     dispatch(setUser(user));
   }
