@@ -67,7 +67,7 @@ input{
 .add{
   width:75%;
 }
-@media only screen and (max-width: 654px) {
+@media only screen and (max-width: 766px) {
   .tlist{
     width: 100%;
   }

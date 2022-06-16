@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUser, updateUser, setFilter } from "../redux/action";
 import { store } from "../redux/store/store";
 import { toast } from "react-hot-toast";
+import uuid from "react-uuid";
 
 const Add = () => {
   const [type, setType] = useState("");
@@ -18,7 +19,13 @@ const Add = () => {
   }
   function handleSubmit(e) {
     console.log(amount);
-    if (type === "" || title === "" || amount === null || isNaN(amount)) {
+    if (
+      type === "" ||
+      title === "" ||
+      amount === null ||
+      amount === 0 ||
+      isNaN(amount)
+    ) {
       toast.error("All fields must be filled");
       return;
     }
@@ -27,16 +34,18 @@ const Add = () => {
       amount: amount,
       type: type,
       created: Date.now(),
-      id: user.transactions.length + 1,
+      id: uuid(),
     });
     let newdata = {
       ...user,
     };
-    console.log("user", user);
     dispatch(updateUser(user));
     dispatch(setUser(user));
     toast.success("Transaction added");
     setAdd(false);
+    setType("");
+    setTitle("");
+    setAmount(0);
   }
   let form = (
     <div className="d-flex column">
@@ -91,7 +100,7 @@ const Add = () => {
     >
       <span
         onClick={(e) => {
-          setAdd(true);
+          add ? setAdd(false) : setAdd(true);
         }}
       >
         &#x271A; Add a transaction

@@ -6,7 +6,7 @@ import TransactionList from "./TransactionList";
 
 const Transactions = () => {
   const dispatch = useDispatch();
-  const transactions = useSelector((state) => state.users.transactions);
+  const user = useSelector((state) => state.users);
   const [type, setType] = useState("all");
   useEffect(() => {
     dispatch(getData());
@@ -48,7 +48,7 @@ const Transactions = () => {
           </li>
         </ul>
       </nav>
-      <TransactionList transactions={transactions} type={type} />
+      <TransactionList user={user} type={type} />
     </div>
   );
 };
