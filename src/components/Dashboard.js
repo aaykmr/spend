@@ -12,6 +12,7 @@ class Dashboard extends Component {
   componentDidUpdate() {
     console.log("Update");
   }
+
   calculate() {
     this.credit = 0;
     this.debit = 0;
