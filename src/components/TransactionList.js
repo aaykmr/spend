@@ -31,7 +31,6 @@ const TransactionList = ({ user, type }) => {
     user.transactions.splice(user.transactions.indexOf(curr), 1);
     dispatch(updateUser(user));
     dispatch(setUser(user));
-    console.log("user");
   }
 
   return (
