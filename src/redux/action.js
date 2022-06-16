@@ -73,12 +73,9 @@ export const updateUser = (payload) => (dispatch) => {
       currIndex = curr.indexOf(ele);
     }
   });
-  console.log(currIndex);
   curr.splice(currIndex, 1);
   curr.push(payload);
   localStorage.setItem("users", JSON.stringify(curr));
-  //   localStorage.setItem("users");
-  //   dispatch(getDataSuccess(JSON.parse(localStorage.getItem("user"))));
 };
 
 export const logout = (payload) => (dispatch) => {

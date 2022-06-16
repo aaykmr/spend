@@ -12,7 +12,6 @@ const Add = () => {
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.users);
-  const prev = JSON.parse(JSON.stringify(user));
   //console.log(user);
   function handleType(type) {
     setType(type);
