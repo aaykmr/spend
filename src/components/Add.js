@@ -48,6 +48,7 @@ const Add = () => {
   let form = (
     <div className="d-flex column">
       <button
+        data-testid="debitBtn"
         className={
           type == "debit"
             ? "btn btn-success m-2"
@@ -58,6 +59,7 @@ const Add = () => {
         Debit
       </button>
       <button
+        data-testid="creditBtn"
         className={
           type == "credit"
             ? "btn btn-success m-2"
@@ -68,6 +70,7 @@ const Add = () => {
         Credit
       </button>
       <input
+        data-testid="title"
         className="input m-2"
         type="text"
         placeholder="Title"
@@ -76,6 +79,7 @@ const Add = () => {
         }}
       ></input>
       <input
+        data-testid="amount"
         className="input m-2"
         type="number"
         placeholder="Amount"
@@ -83,7 +87,11 @@ const Add = () => {
           setAmount(parseInt(e.target.value));
         }}
       ></input>
-      <button className="btn btn-primary" onClick={(e) => handleSubmit(e)}>
+      <button
+        data-testid="submitBtn"
+        className="btn btn-primary"
+        onClick={(e) => handleSubmit(e)}
+      >
         Submit
       </button>
     </div>
@@ -97,6 +105,7 @@ const Add = () => {
       }
     >
       <span
+        data-testid="addBtn"
         onClick={(e) => {
           add ? setAdd(false) : setAdd(true);
         }}

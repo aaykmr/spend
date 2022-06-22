@@ -3,14 +3,9 @@ import { connect } from "react-redux";
 class Dashboard extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.credit = 0;
     this.debit = 0;
     this.total = 0;
-  }
-
-  componentDidUpdate() {
-    console.log("Update");
   }
 
   calculate() {
@@ -33,7 +28,6 @@ class Dashboard extends Component {
 
   render() {
     this.calculate();
-    console.log("first");
     return (
       <div className="row p-4">
         <div className="card col d-flex flex-column justify-content-center align-items-center bg-transparent border-success p-4 m-2">

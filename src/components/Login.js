@@ -54,6 +54,7 @@ export const Login = () => {
       />
       <button
         className="btn btn-primary"
+        data-testid="loginBtn"
         onClick={(e) => {
           handleSubmit();
         }}
