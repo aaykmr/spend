@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     padding: 1rem 2rem;
     background-color: transparent;
-    box-shadow: 0 0 10px 2px ${({ theme }) => theme.boxShadow};
+    border: 1px solid ${({ theme }) => theme.text};
     border-radius: 10px;
     margin: 2rem;
     min-height: 17rem;

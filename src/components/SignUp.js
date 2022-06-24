@@ -47,7 +47,7 @@ export const Signup = () => {
   }
 
   return (
-    <div className="post">
+    <div className="post" data-testid="signUpCard">
       <h1>Sign Up </h1>
       <input
         type="text"
@@ -70,7 +70,6 @@ export const Signup = () => {
         placeholder="Choose Password"
         onChange={(e) => setPass(e.target.value)}
       />
-
       <input
         type="password"
         id="signPassConfirm"
@@ -78,7 +77,11 @@ export const Signup = () => {
         placeholder="Repeat Password"
         onChange={(e) => setPassV(e.target.value)}
       />
-      <button className="btn btn-primary" onClick={(e) => handleSubmit(e)}>
+      <button
+        className="btn btn-primary"
+        data-testid="signBtn"
+        onClick={(e) => handleSubmit(e)}
+      >
         Submit
       </button>
     </div>

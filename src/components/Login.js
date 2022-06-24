@@ -32,7 +32,7 @@ export const Login = () => {
     }
   }
   return (
-    <div className="post">
+    <div className="post" data-testid="loginCard">
       <h1>Login</h1>
       <input
         type="text"

@@ -22,7 +22,7 @@ function App() {
   return (
     <ThemeProvider theme={mode}>
       <GlobalStyles />
-      <Toaster />
+      <Toaster data-testid="toast" />
       <div className="container-fluid p-0" id="container">
         <UserContext.Provider value={users}>
           <AuthCheck>

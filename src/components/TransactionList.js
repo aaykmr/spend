@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { setUser, updateUser } from "../redux/action";
 
@@ -26,6 +26,7 @@ const TransactionList = ({ user, type }) => {
   function handleDelete(ele) {
     let curr = user.transactions.find((e) => {
       haveSameData(ele, e);
+      console.log("AAYUSH", ele);
       return haveSameData(e, ele);
     });
     user.transactions.splice(user.transactions.indexOf(curr), 1);
@@ -38,7 +39,8 @@ const TransactionList = ({ user, type }) => {
       {transactions.map((ele) => {
         return (
           <div
-            className=" d-flex justify-content-between align-items-center tlist border border-2 border-primary rounded m-2"
+            className="d-flex justify-content-between align-items-center tlist border border-2 border-primary rounded m-2"
+            data-testid="transaction"
             key={ele.id}
           >
             <span className="m-2">{ele.title}</span>
@@ -46,6 +48,7 @@ const TransactionList = ({ user, type }) => {
             <span className="m-2">{new Date(ele.created).toDateString()}</span>
             <button
               className="btn btn-outline-danger m-2"
+              data-testid="deleteTransaction"
               onClick={(e) => handleDelete(ele)}
             >
               <i className="fa fa-trash-o"></i>

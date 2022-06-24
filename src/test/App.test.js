@@ -17,31 +17,11 @@ beforeEach(() => {
 });
 describe("Testing the Login/Sigup page", () => {
   it("Renders Login Card  ", () => {
-    const loginId = screen.getByTestId("loginId");
-    expect(loginId).toBeInTheDocument();
-
-    const loginPass = screen.getByTestId("loginPass");
-    expect(loginPass).toBeInTheDocument();
-
-    const loginBtn = screen.getByTestId("loginBtn");
-    expect(loginBtn).toBeInTheDocument();
-
-    userEvent.type(loginId, "ak");
-    userEvent.type(loginPass, "1234");
-    console.log(loginBtn);
-    // fireEvent.click(loginBtn);
+    const loginCard = screen.getByTestId("loginCard");
+    expect(loginCard).toBeInTheDocument();
   });
   it("Renders Sign Up Card ", () => {
-    const nameId = screen.getByTestId("nameId");
-    expect(nameId).toBeInTheDocument();
-
-    const signId = screen.getByTestId("signId");
-    expect(signId).toBeInTheDocument();
-
-    const signPass = screen.getByTestId("signPass");
-    expect(signPass).toBeInTheDocument();
-
-    const signPassConfirm = screen.getByTestId("signPassConfirm");
-    expect(signPassConfirm).toBeInTheDocument();
+    const signUpCard = screen.getByTestId("signUpCard");
+    expect(signUpCard).toBeInTheDocument();
   });
 });
